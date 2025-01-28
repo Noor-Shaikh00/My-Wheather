@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 10px; /* Add margin for smaller screens */
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.location i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.location h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    margin: 20px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.temperature h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.temperature p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Adjust layout for smaller screens */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Add spacing for items */
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.info-item span {
+    font-size: 1rem;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .weather-icon {
+        font-size: 3rem;
+    }
+
+    .temperature h2 {
+        font-size: 2.5rem;
+    }
+
+    .temperature p {
+        font-size: 1rem;
+    }
+
+    .additional-info {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .info-item {
+        justify-content: center; /* Center align info items */
+    }
+}
+
+@media (max-width: 480px) {
+    .location h1 {
+        font-size: 1.2rem;
+    }
+
+    .weather-icon {
+        font-size: 2.5rem;
+    }
+
+    .temperature h2 {
+        font-size: 2rem;
+    }
+
+    .temperature p {
+        font-size: 0.9rem;
+    }
+
+    .info-item i {
+        font-size: 1.2rem;
+    }
+
+    .info-item span {
+        font-size: 0.9rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+}
